@@ -30,6 +30,25 @@ import {
   ModalFooter,
  } from 'reactstrap';
 
+import { Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle } from 'reactstrap';
+
+const Example =({company, sku, lot, xId, handleInvestigate, image}) => {
+  image = image? image : dog;
+  return (
+      <Col sm="3">
+        <Card body>
+          <CardImg top width={200} height={150} src={image} alt={dog} />
+          <br/>
+          <CardTitle>Company: {company}</CardTitle>
+          <CardText>SKU: {sku}</CardText>
+          <CardText>Lot #: {lot}</CardText>
+          <Button onClick={handleInvestigate}>Investigate</Button>
+        </Card>
+      </Col>
+  );
+};
+
 const OnePost = ({company, sku, lot, xId, handleInvestigate, image}) => (
   <Col>
     <Form>
@@ -276,7 +295,7 @@ class App extends Component {
               {
                 this.state.posts.map((p, index) => {
                   return (
-                      <OnePost image={p.image} sku={p.sku} lot={p.lot} company={p.company} description={p.description} hashtag={p.hashtag} key={index} handleInvestigate={this.toggle2}/>
+                      <Example image={p.image} sku={p.sku} lot={p.lot} company={p.company} description={p.description} hashtag={p.hashtag} key={index} handleInvestigate={this.toggle2}/>
                   )
                 })
               }
