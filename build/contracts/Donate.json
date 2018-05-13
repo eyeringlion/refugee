@@ -54,14 +54,14 @@
       "type": "function"
     }
   ],
-  "bytecode": "0x6060604052341561000f57600080fd5b6102dd8061001e6000396000f300606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680634abfa1631461005c578063e0218fb3146100bf578063f14faf6f14610110575b600080fd5b341561006757600080fd5b61007d6004808035906020019091905050610147565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34156100ca57600080fd5b6100d261017c565b6040518082601060200280838360005b838110156100fd5780820151818401526020810190506100e2565b5050505090500191505060405180910390f35b341561011b57600080fd5b61013160048080359060200190919050506101fd565b6040518082815260200191505060405180910390f35b60008160108110151561015657fe5b016000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b610184610272565b60006010806020026040519081016040528092919082601080156101f3576020028201915b8160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190600101908083116101a9575b5050505050905090565b60008082101580156102105750600f8211155b151561021b57600080fd5b3360008360108110151561022b57fe5b0160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550819050919050565b610200604051908101604052806010905b600073ffffffffffffffffffffffffffffffffffffffff1681526020019060019003908161028357905050905600a165627a7a72305820b22685216f879f5fe69aa1c5058ddaf5f14c335270e509b527cf93acdd8e989f0029",
-  "deployedBytecode": "0x606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680634abfa1631461005c578063e0218fb3146100bf578063f14faf6f14610110575b600080fd5b341561006757600080fd5b61007d6004808035906020019091905050610147565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34156100ca57600080fd5b6100d261017c565b6040518082601060200280838360005b838110156100fd5780820151818401526020810190506100e2565b5050505090500191505060405180910390f35b341561011b57600080fd5b61013160048080359060200190919050506101fd565b6040518082815260200191505060405180910390f35b60008160108110151561015657fe5b016000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b610184610272565b60006010806020026040519081016040528092919082601080156101f3576020028201915b8160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190600101908083116101a9575b5050505050905090565b60008082101580156102105750600f8211155b151561021b57600080fd5b3360008360108110151561022b57fe5b0160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550819050919050565b610200604051908101604052806010905b600073ffffffffffffffffffffffffffffffffffffffff1681526020019060019003908161028357905050905600a165627a7a72305820b22685216f879f5fe69aa1c5058ddaf5f14c335270e509b527cf93acdd8e989f0029",
-  "sourceMap": "26:339:0:-;;;;;;;;;;;;;;;;;",
-  "deployedSourceMap": "26:339:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;45:25;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;287:76;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;287:76:0;;;;;;;;;;;;;;;;93:163;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;45:25;;;;;;;;;;;;;;;;;;;;;;;;;:::o;287:76::-;328:11;;:::i;:::-;353:6;346:13;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;287:76;:::o;93:163::-;141:4;173:1;160:9;:14;;:33;;;;;191:2;178:9;:15;;160:33;152:42;;;;;;;;220:10;200:6;207:9;200:17;;;;;;;;;;;:30;;;;;;;;;;;;;;;;;;243:9;236:16;;93:163;;;:::o;26:339::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "bytecode": "0x608060405234801561001057600080fd5b506102d8806100206000396000f300608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680634abfa1631461005c578063e0218fb3146100c9578063f14faf6f1461011c575b600080fd5b34801561006857600080fd5b506100876004803603810190808035906020019092919050505061015d565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156100d557600080fd5b506100de610192565b6040518082601060200280838360005b838110156101095780820151818401526020810190506100ee565b5050505090500191505060405180910390f35b34801561012857600080fd5b5061014760048036038101908080359060200190929190505050610213565b6040518082815260200191505060405180910390f35b60008160108110151561016c57fe5b016000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b61019a610288565b6000601080602002604051908101604052809291908260108015610209576020028201915b8160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190600101908083116101bf575b5050505050905090565b60008082101580156102265750600f8211155b151561023157600080fd5b3360008360108110151561024157fe5b0160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550819050919050565b610200604051908101604052806010906020820280388339808201915050905050905600a165627a7a723058202031c11b7a818f4ddfb2dee813f39b162573e7b359a037d41c078cc93823a8e10029",
+  "deployedBytecode": "0x608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680634abfa1631461005c578063e0218fb3146100c9578063f14faf6f1461011c575b600080fd5b34801561006857600080fd5b506100876004803603810190808035906020019092919050505061015d565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156100d557600080fd5b506100de610192565b6040518082601060200280838360005b838110156101095780820151818401526020810190506100ee565b5050505090500191505060405180910390f35b34801561012857600080fd5b5061014760048036038101908080359060200190929190505050610213565b6040518082815260200191505060405180910390f35b60008160108110151561016c57fe5b016000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b61019a610288565b6000601080602002604051908101604052809291908260108015610209576020028201915b8160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190600101908083116101bf575b5050505050905090565b60008082101580156102265750600f8211155b151561023157600080fd5b3360008360108110151561024157fe5b0160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550819050919050565b610200604051908101604052806010906020820280388339808201915050905050905600a165627a7a723058202031c11b7a818f4ddfb2dee813f39b162573e7b359a037d41c078cc93823a8e10029",
+  "sourceMap": "26:339:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:339:0;;;;;;;",
+  "deployedSourceMap": "26:339:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;45:25;;8:9:-1;5:2;;;30:1;27;20:12;5:2;45:25:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;287:76;;8:9:-1;5:2;;;30:1;27;20:12;5:2;287:76:0;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;287:76:0;;;;;;;;;;;;;;;;93:163;;8:9:-1;5:2;;;30:1;27;20:12;5:2;93:163:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;45:25;;;;;;;;;;;;;;;;;;;;;;;;;:::o;287:76::-;328:11;;:::i;:::-;353:6;346:13;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;287:76;:::o;93:163::-;141:4;173:1;160:9;:14;;:33;;;;;191:2;178:9;:15;;160:33;152:42;;;;;;;;220:10;200:6;207:9;200:17;;;;;;;;;;;:30;;;;;;;;;;;;;;;;;;243:9;236:16;;93:163;;;:::o;26:339::-;;;;;;;;;;;;29:2:-1;21:6;17:15;117:4;105:10;97:6;88:34;148:4;140:6;136:17;126:27;;0:157;26:339:0;;;;:::o",
   "source": "pragma solidity ^0.4.18;\n\ncontract Donate {\n\taddress[16] public donors;\n\n\t// Adopting a pet\n\tfunction donate(uint refugeeId) public returns (uint) {\n\t  require(refugeeId >= 0 && refugeeId <= 15);\n\n\t  donors[refugeeId] = msg.sender;\n\n\t  return refugeeId;\n\t}\n\n\t// Retrieving the adopters\n\tfunction getDonor() public view returns (address[16]) {\n\t  return donors;\n\t}\n}",
-  "sourcePath": "/Users/eyeringlion/Documents/Projects/truffle/react-tutorial/contracts/Donate.sol",
+  "sourcePath": "/Users/eyeringlion/Documents/Projects/consensus2018/react-tutorial/contracts/Donate.sol",
   "ast": {
-    "absolutePath": "/Users/eyeringlion/Documents/Projects/truffle/react-tutorial/contracts/Donate.sol",
+    "absolutePath": "/Users/eyeringlion/Documents/Projects/consensus2018/react-tutorial/contracts/Donate.sol",
     "exportedSymbols": {
       "Donate": [
         43
@@ -105,7 +105,7 @@
             "storageLocation": "default",
             "typeDescriptions": {
               "typeIdentifier": "t_array$_t_address_$16_storage",
-              "typeString": "address[16] storage ref"
+              "typeString": "address[16]"
             },
             "typeName": {
               "baseType": {
@@ -141,7 +141,7 @@
               "src": "45:11:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_array$_t_address_$16_storage_ptr",
-                "typeString": "address[16] storage pointer"
+                "typeString": "address[16]"
               }
             },
             "value": null,
@@ -287,8 +287,11 @@
                       "id": 12,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 59,
+                      "overloadedDeclarations": [
+                        141,
+                        142
+                      ],
+                      "referencedDeclaration": 141,
                       "src": "152:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -371,7 +374,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 56,
+                        "referencedDeclaration": 138,
                         "src": "220:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -561,7 +564,7 @@
                   "storageLocation": "default",
                   "typeDescriptions": {
                     "typeIdentifier": "t_array$_t_address_$16_memory_ptr",
-                    "typeString": "address[16] memory"
+                    "typeString": "address[16]"
                   },
                   "typeName": {
                     "baseType": {
@@ -597,7 +600,7 @@
                     "src": "328:11:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_address_$16_storage_ptr",
-                      "typeString": "address[16] storage pointer"
+                      "typeString": "address[16]"
                     }
                   },
                   "value": null,
@@ -620,7 +623,7 @@
     "src": "0:365:0"
   },
   "legacyAST": {
-    "absolutePath": "/Users/eyeringlion/Documents/Projects/truffle/react-tutorial/contracts/Donate.sol",
+    "absolutePath": "/Users/eyeringlion/Documents/Projects/consensus2018/react-tutorial/contracts/Donate.sol",
     "exportedSymbols": {
       "Donate": [
         43
@@ -664,7 +667,7 @@
             "storageLocation": "default",
             "typeDescriptions": {
               "typeIdentifier": "t_array$_t_address_$16_storage",
-              "typeString": "address[16] storage ref"
+              "typeString": "address[16]"
             },
             "typeName": {
               "baseType": {
@@ -700,7 +703,7 @@
               "src": "45:11:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_array$_t_address_$16_storage_ptr",
-                "typeString": "address[16] storage pointer"
+                "typeString": "address[16]"
               }
             },
             "value": null,
@@ -846,8 +849,11 @@
                       "id": 12,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 59,
+                      "overloadedDeclarations": [
+                        141,
+                        142
+                      ],
+                      "referencedDeclaration": 141,
                       "src": "152:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -930,7 +936,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 56,
+                        "referencedDeclaration": 138,
                         "src": "220:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -1120,7 +1126,7 @@
                   "storageLocation": "default",
                   "typeDescriptions": {
                     "typeIdentifier": "t_array$_t_address_$16_memory_ptr",
-                    "typeString": "address[16] memory"
+                    "typeString": "address[16]"
                   },
                   "typeName": {
                     "baseType": {
@@ -1156,7 +1162,7 @@
                     "src": "328:11:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_address_$16_storage_ptr",
-                      "typeString": "address[16] storage pointer"
+                      "typeString": "address[16]"
                     }
                   },
                   "value": null,
@@ -1180,16 +1186,16 @@
   },
   "compiler": {
     "name": "solc",
-    "version": "0.4.21+commit.dfe3193c.Emscripten.clang"
+    "version": "0.4.23+commit.124ca40d.Emscripten.clang"
   },
   "networks": {
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x90905cf9efc113b2e873f2d1745df218e0b7416c",
-      "transactionHash": "0x929623e6d5a8e3cc70418b991d2f9ba08cb53d1da974e617ecda3a6d88b9dacb"
+      "address": "0xf12bb10b17c57ea10224d8c76a6481f9441e86f1",
+      "transactionHash": "0x7961ab50ba34b7e966fc99857a165507160b8689ed7a9a03e78cae7f4a3bfa35"
     }
   },
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-03-31T19:31:05.988Z"
+  "updatedAt": "2018-05-13T00:44:36.061Z"
 }

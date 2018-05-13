@@ -28,62 +28,78 @@ import {
   ModalHeader,
   ModalBody,
   ModalFooter,
+  InputGroup,
+  InputGroupAddon,
  } from 'reactstrap';
 
 import { Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle } from 'reactstrap';
 
-const Example =({company, sku, lot, xId, handleInvestigate, image}) => {
+// import logo from './logo.svg';
+import './App.css';
+
+import { AgGridReact } from 'ag-grid-react';
+import 'ag-grid/dist/styles/ag-grid.css';
+import 'ag-grid/dist/styles/ag-theme-balham.css';
+
+const columnDefs = [
+    {headerName: "Coin", field: "coin", "width": 70},
+    {headerName: "Initial Price", field: "initialPrice", "width": 70},
+    {headerName: "Current Price", field: "currentPrice", "width": 70}
+];
+
+const rowData = [
+    {coin: "ETH", initialPrice: "$ 677.12", currentPrice: "$ 677.12", },
+    {coin: "BTC", initialPrice: "$ 8,421.74", currentPrice: "$ 8,421.74", },
+    {coin: "LTC", initialPrice: "$ 139.97", currentPrice: "$ 139.97", }
+];
+
+const Example =({title, followers, totalBid=0, xId, handleBid, handleInvestigate, image, bidAmount=0}) => {
   image = image? image : dog;
+  bidAmount = parseInt(bidAmount);
+  totalBid = bidAmount + totalBid;
   return (
       <Col sm="3">
         <Card body>
-          <CardImg top width={200} height={150} src={image} alt={dog} />
+          <CardTitle>{title}</CardTitle>
+          <div 
+            className="ag-theme-balham"
+            style={{ 
+            height: '220px', 
+            width: '205px' }} 
+          >
+              <AgGridReact
+                  columnDefs={columnDefs}
+                  rowData={rowData}>
+              </AgGridReact>
+          </div>
           <br/>
-          <CardTitle>Company: {company}</CardTitle>
-          <CardText>SKU: {sku}</CardText>
-          <CardText>Lot #: {lot}</CardText>
-          <Button onClick={handleInvestigate}>Investigate</Button>
+          <CardText>Followers: {followers}</CardText>
+          <CardText>Total bid: $ {totalBid}</CardText>
+          <InputGroup>
+            <Input name="bidAmount" id="bidAmount" placeholder="Enter amount $"/>
+            <InputGroupAddon addonType="prepend"><Button>Bid</Button></InputGroupAddon>
+          </InputGroup>
+          <br/>
+          <Button onClick={handleInvestigate}>Details</Button>
         </Card>
       </Col>
   );
 };
 
-const OnePost = ({company, sku, lot, xId, handleInvestigate, image}) => (
-  <Col>
-    <Form>
-    <div><img src={image} width={200} height={150} mode='fit' alt={dog}/></div>
-      <FormGroup>
-        <Label for="company">Company: {company}</Label>
-      </FormGroup>
-      <FormGroup>
-        <Label for="sku">SKU: {sku}</Label>
-      </FormGroup>
-      <FormGroup>
-        <Label for="lot">Lot #: {lot}</Label>
-      </FormGroup>
-      <Button color="secondary" onClick={handleInvestigate}>Investigate</Button>
-    </Form>
-  </Col>
-)
-
 const RequestForm = ({submitRequest, onChange}) => (
       <Form>
         <FormGroup>
-          <Label for="company">Company</Label>
-          <Input name="company" id="company" placeholder="company" onChange={onChange}/>
+          <Label for="title">Title</Label>
+          <Input name="title" id="title" placeholder="title" onChange={onChange}/>
         </FormGroup>
         <FormGroup>
-          <Label for="sku">SKU</Label>
-          <Input name="sku" id="sku" placeholder="sku" onChange={onChange}/>
+          <Label for="prediction">Enter your prediction:</Label>
+          <Input name="prediction" id="prediction" placeholder="prediction" onChange={onChange}/>
         </FormGroup>
         <FormGroup>
-          <Label for="hashtag">Lot #</Label>
-          <Input name="lot" id="lot" placeholder="lot" onChange={onChange}/>
-        </FormGroup>
-        <FormGroup>
-          <Label for="xId">Transaction ID</Label>
-          <Input type="textarea" name="xId" id="xId" placeholder="transaction id" onChange={onChange}/>
+          <Label for="bidAmount">Bid amount:</Label>
+          <Input name="bidAmount" id="bidAmount" placeholder="bidAmount" onChange={onChange}/>
         </FormGroup>
         <Button onClick={submitRequest}>Submit</Button>
       </Form>
@@ -98,31 +114,19 @@ class App extends Component {
       web3: null,
       posts: [
         {
-          company: 'Blue',
-          refugeeId: '0x68A021EFb629168168AaD4C745E5d4952d42B834',
-          hashtag: '#1#2#3',
-          description:'test1',
-          image: blue,
-          sku: 'B001',
-          lot: '001',
+          title: 'First prediction',
+          followers: 103,
+          totalBid: 5620.96,
         }, 
         {
-          company: 'Cesar',
-          description:'test2',
-          refugeeId: '0x68A021EFb629168168AaD4C745E5d4952d42B834',
-          hashtag: '#1#2#3',
-          image: cesar,
-          sku: 'C001',
-          lot: '001',
+          title: 'Second prediction',
+          followers: 3050,
+          totalBid: 10200.96,
         }, 
         {
-          company: 'Pedigree',
-          description:'test3',
-          refugeeId: '0x68A021EFb629168168AaD4C745E5d4952d42B834',
-          hashtag: '#1#2#3',
-          image: pedigree,
-          sku: 'P001',
-          lot: '001',
+          title: 'Third prediction',
+          followers: 18,
+          totalBid: 620.96,
         }
       ],
       popoverOpen: false,
@@ -207,7 +211,7 @@ class App extends Component {
         // return App.markAdopted();
           let posts = $this.state.posts.slice();
           posts.push($this.state);
-          // console.log('submitRequest', this.state)
+          console.log('submitRequest', $this.state)
           $this.setState({
             posts,
             modal: !$this.state.modal,
@@ -255,14 +259,14 @@ class App extends Component {
     return (
       <div className="App">
         <nav className="navbar pure-menu pure-menu-horizontal">
-            <a href="#" className="pure-menu-heading pure-menu-link">How Chow?</a>
+            <a href="#" className="pure-menu-heading pure-menu-link">Cryptogram</a>
         </nav>
 
         <main className="container">
         <div>
           <Button onClick={this.toggle}>Post</Button>
           <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-            <ModalHeader toggle={this.toggle}>Enter your request</ModalHeader>
+            <ModalHeader toggle={this.toggle}>Enter your prediction</ModalHeader>
             <ModalBody>
               <RequestForm submitRequest={this.submitRequest} onChange={this.handleChange}/>
             </ModalBody>
@@ -271,21 +275,17 @@ class App extends Component {
             <ModalHeader toggle={this.toggle2}>Details</ModalHeader>
             <ModalBody>
               <Form>
-                <FormGroup>
-                  <Label>Transaction Id: <a href="#" >000066656dc64e135acc46</a></Label>
-                </FormGroup>
-                <FormGroup>
-                  <Label>Chicken Id: <a href="#" >000088656dc64e135acc34</a></Label>
-                </FormGroup>
-                <FormGroup>
-                  <Label>Beef Id: <a href="#" >000067756dc64e135acc25</a></Label>
-                </FormGroup>
-                <FormGroup>
-                  <Label>Water Id: <a href="#" >000061156dc64e135acc78</a></Label>
-                </FormGroup>
-                <FormGroup>
-                  <Label>Sodium Id:<a href="#" >000022656dc64e135acc66</a> </Label>
-                </FormGroup>
+                <div 
+                  className="ag-theme-balham"
+                  style={{ 
+                  height: '220px', 
+                  width: '205px' }} 
+                >
+                  <AgGridReact
+                      columnDefs={columnDefs}
+                      rowData={rowData}>
+                  </AgGridReact>
+              </div>
               </Form>
             </ModalBody>
           </Modal>
@@ -295,7 +295,7 @@ class App extends Component {
               {
                 this.state.posts.map((p, index) => {
                   return (
-                      <Example image={p.image} sku={p.sku} lot={p.lot} company={p.company} description={p.description} hashtag={p.hashtag} key={index} handleInvestigate={this.toggle2}/>
+                      <Example bidAmount={p.bidAmount} image={p.image} followers={p.followers} totalBid={p.totalBid} title={p.title} description={p.description} hashtag={p.hashtag} key={index} handleInvestigate={this.toggle2}/>
                   )
                 })
               }
